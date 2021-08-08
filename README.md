@@ -134,7 +134,7 @@ Tal Hazi <> [talhazi114@gmail.com](mailto:talhazi114@gmail.com)
 [gmail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
 [gmail-url]: mailto:talhazi114@gmail.com
 
-[report-example]: images/report_example.png
-[log-example]: images/log_example.png
-[lightricks_logo]: images/lightricks_logo.png
+[report-example]: Vehicle-Tracker/images/report_example.png
+[log-example]: Vehicle-Tracker/images/log_example.png
+[lightricks_logo]: Vehicle-Tracker/images/lightricks_logo.png
 
