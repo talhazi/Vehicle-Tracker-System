@@ -134,6 +134,6 @@ Tal Hazi <> [talhazi114@gmail.com](mailto:talhazi114@gmail.com)
 [gmail-url]: mailto:talhazi114@gmail.com
 
 [report-example]: "Vehicle-Tracker-System/Vehicle-Tracker/images/report_example.png"
-[log-example]: ./Vehicle-Tracker/images/log_example.png
+[log-example]: "./Vehicle-Tracker/images/log_example.png"
 [lightricks_logo]: Vehicle-Tracker-System/Vehicle-Tracker/images/lightricks_logo.png
 
