@@ -33,7 +33,7 @@ public class ImageHandler {
     }
 
     //get the time of the image
-     String getTime(String strFileName) throws Exception {
+     String getImageTime(String strFileName) throws Exception {
         String time = null;
         Metadata metadata = ImageMetadataReader.readMetadata(new File(strFileName));
         for (Directory directory : metadata.getDirectories()) {
@@ -54,7 +54,7 @@ public class ImageHandler {
     }
 
     //get the location of the image
-     String getLocation(String strFileName) throws Exception {
+     String getImageLocation(String strFileName) throws Exception {
         String location = null;
         Metadata metadata = ImageMetadataReader.readMetadata(new File(strFileName));
         for (Directory directory : metadata.getDirectories()) {

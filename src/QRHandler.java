@@ -13,7 +13,7 @@ public class QRHandler {
     public QRHandler() {
     }
 
-    String readQRcode(String strFileName, ImageHandler imageHandler){
+    String getQRcodeReading(String strFileName, ImageHandler imageHandler){
         try {
             //assuming the QRcode is in the middle of the image, Therefore there is no need to scan at the edges
             BufferedImage SubImage = imageHandler.getSubImage(strFileName, 4); //(need to make sure include qr)
@@ -21,14 +21,13 @@ public class QRHandler {
             AffineTransform xform =  AffineTransform.getScaleInstance(1.4,1.8);
             SubImage = new AffineTransformOp(xform, AffineTransformOp.TYPE_BICUBIC).filter(SubImage, null);
 
-            BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(
-                    new BufferedImageLuminanceSource(SubImage)));
+            BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(new BufferedImageLuminanceSource(SubImage)));
             Result result = new MultiFormatReader().decode(bitmap);
             return result.getText();
 
         } catch (Exception e) {
             System.err.println("QR Code couldn't be found, please retake a clear picture!");
-            return  "INVALID QRCODE";
+            return "INVALID QRCODE";
         }
     }
 

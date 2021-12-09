@@ -22,6 +22,7 @@ public class OdometerHandler {
         else return "INVALID IMAGE";
     }
 
+    // return true if succeed
     private boolean cropRedRectangle(String strFileName, ImageHandler imageHandler) throws Exception {
         //finding red rectangle
         //assuming the Odometer is in the middle of the image, Therefore there is no need to scan at the edges
@@ -52,8 +53,7 @@ public class OdometerHandler {
         int y_maximum = y_arr.get(y_arr.size()-1);
 
         //cropping
-        BufferedImage odometerOnly = SubImage.getSubimage(x_minimum, y_minimum,
-                x_maximum-x_minimum, y_maximum-y_minimum);
+        BufferedImage odometerOnly = SubImage.getSubimage(x_minimum, y_minimum,x_maximum-x_minimum, y_maximum-y_minimum);
         File outfile = new File("images/croppedOdometer.jpg");
         ImageIO.write(odometerOnly, "jpg", outfile);
         return true;
@@ -64,10 +64,12 @@ public class OdometerHandler {
         Tesseract tesseract = new Tesseract();
         try {
             String text = tesseract.doOCR(new File("images/croppedOdometer.jpg")).replaceAll("\\s+", "");
-            if (text.length()>6){
-                text = text.substring(0,6);
+            int odometerReadingLength = 6;
+            if (text.length() > odometerReadingLength){
+                text = text.substring(0, odometerReadingLength);
             }
             return text;
+
         } catch (TesseractException e) {
             System.err.println("Odometer Read couldn't be found, please retake a clear picture!");
             return "INVALID IMAGE";

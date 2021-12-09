@@ -8,7 +8,7 @@ public class CSVHandler {
         this.fileName = fileName;
     }
 
-    public void createCsv() throws IOException {
+    public void createVehicleTrackerCsv() throws IOException {
         if (!(new File(fileName).exists())) {
             FileWriter csvWriter = new FileWriter(fileName, true);
             addHeader(csvWriter);
@@ -27,9 +27,9 @@ public class CSVHandler {
         return false;
     }
 
-    public void updateCsv(String emlFileName) throws IOException {
+    public void updateCsv(String emlFileName, VehicleInfo vehicleInfo) throws IOException {
         FileWriter csvWriter = new FileWriter(this.fileName,true);
-        addData(csvWriter, emlFileName);
+        addData(csvWriter, emlFileName, vehicleInfo);
     }
 
     public String getFileName() {
@@ -37,31 +37,23 @@ public class CSVHandler {
     }
 
     private void addHeader(FileWriter csvWriter) throws IOException {
-        csvWriter.append("Name of EML,");
-        csvWriter.append("Employee Name,");
-        csvWriter.append("Car License Plate Number,");
-        csvWriter.append("Date & Time,");
-        csvWriter.append("Odometer Read (km),");
-        csvWriter.append("Parking Location");
-        csvWriter.append("\n");
+        csvWriter.append("Name of EML").append(",");
+        csvWriter.append("Employee Name").append(",");
+        csvWriter.append("Car License Plate Number").append(",");
+        csvWriter.append("Date & Time").append(",");
+        csvWriter.append("Odometer Read (km)").append(",");
+        csvWriter.append("Parking Location").append("\n");
         csvWriter.flush();
         csvWriter.close();
     }
 
-    private void addData(FileWriter csvWriter, String emlFileName) throws IOException {
+    private void addData(FileWriter csvWriter, String emlFileName, VehicleInfo vehicleInfo) throws IOException {
         csvWriter.append(emlFileName).append(",");
-        //cleaning the fields after each update
-        csvWriter.append(VehicleTracker.info.employee_name).append(",");
-        VehicleTracker.info.employee_name = "";
-        csvWriter.append(VehicleTracker.info.license_plate).append(",");
-        VehicleTracker.info.license_plate = "";
-        csvWriter.append(VehicleTracker.info.date_time).append(",");
-        VehicleTracker.info.date_time = "";
-        csvWriter.append(VehicleTracker.info.odometer).append(",");
-        VehicleTracker.info.odometer = "";
-        csvWriter.append(VehicleTracker.info.location);
-        VehicleTracker.info.location = "";
-        csvWriter.append("\n");
+        csvWriter.append(vehicleInfo.getEmployeeName()).append(",");
+        csvWriter.append(vehicleInfo.getLicensePlate()).append(",");
+        csvWriter.append(vehicleInfo.getDateAndTime()).append(",");
+        csvWriter.append(vehicleInfo.getOdometer()).append(",");
+        csvWriter.append(vehicleInfo.getLocation()).append("\n");
         csvWriter.flush();
         csvWriter.close();
     }
