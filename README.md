@@ -1,10 +1,3 @@
-[![LinkedIn][linkedin-shield]][linkedin-url]
-[![Github][github-shield]][github-url]
-[![Gmail][gmail-shield]][gmail-url]
-
-
-<!-- PROJECT LOGO -->
-[![logo][lightricks_logo]][lightricks_logo]
 <p align="center">
   <h1 align="center">Company Vehicle Tracker</h1>
 
@@ -126,13 +119,5 @@ Tal Hazi <> [talhazi114@gmail.com](mailto:talhazi114@gmail.com)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
-[linkedin-url]: https://www.linkedin.com/in/talhazi/
-[github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
-[github-url]: https://github.com/talhazi
-[gmail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
-[gmail-url]: mailto:talhazi114@gmail.com
-
-[report-example]: https://github.com/talhazi/Vehicle-Tracker-System/blob/main/Vechicle-Tracker/images/report_example.png
-[log-example]: https://github.com/talhazi/Vehicle-Tracker-System/blob/main/Vechicle-Tracker/images/log_example.png
-[lightricks_logo]: https://github.com/talhazi/Vehicle-Tracker-System/blob/main/Vechicle-Tracker/images/lightricks_logo.png
+[report-example]: images/report_example.png
+[log-example]: images/log_example.png
