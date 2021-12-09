@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="ClearImageJ">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libraries/ClearImageJ.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/libraries/ClearImageJ.jar!/" />
+    </SOURCES>
+  </library>
+</component>
