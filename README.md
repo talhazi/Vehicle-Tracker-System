@@ -1,17 +1,6 @@
-<p align="center">
-  <h1 align="center">Company Vehicle Tracker</h1>
+# Company Vehicle Tracker
 
-  <p align="center">
-    simplify the car reporting process for the employee by
-automating it!
-    <br />
-    <br />
-<!--
-    <a href="https://github.com/.../issues">Request Feature</a>
-    ·
-    <a href="https://github.com/.../issues">Report Bug</a>
--->
- </p>
+simplify the car reporting process for the employee by automating it!
 
 
 
@@ -43,7 +32,6 @@ automating it!
 
 <!-- Before this PROJECT -->
 ## Before this Project
-
 When the employee begins a ride and after he finishes it, he needs to
 send a ride report via email to a designated email box. The report should contain the
 following details:
@@ -54,7 +42,6 @@ following details:
 5. The parking location.
 
 ### The problem
-
 This reporting procedure has a few issues. It is tedious, thus sometimes forgotten or
 ignored. It is prone to human errors and not all employees stick to a uniform email
 format, which makes it harder to track report emails by eye. An additional issue is that
@@ -65,7 +52,6 @@ to be as specific as possible, so the next employee who picks the car will find 
 
 <!-- After this PROJECT -->
 ## After this Project
-
 we simplify the reporting process for the employee by automating it. In order to assist the automation of generating the reports on each car’s dashboard,
 we will stick 2 stickers:
 1. A sticker with the car’s license plate number as a [QR code](https://en.wikipedia.org/wiki/QR_code).
@@ -78,38 +64,39 @@ anything, all the required information is already in attached to this email.
 
 
 ### The new Application
-
 1. The input for the application will be a path to a textual [EML](https://www.loc.gov/preservation/digital/formats/fdd/fdd000388.shtml) report file, given as a command
 line argument. The images attached to the emails will be in JPEG format, and they will be
    [Geotagged](https://en.wikipedia.org/wiki/Geotagging) by the sender.
    ![Report Example][report-example]
-
 2. The application will process the report email and append all the required report
    data to a CSV “log” file.
    ![log Example][log-example]
 
 
+## Tests
+Few EML files for example and testing are in ./tests folder.
 
 
-   
-<!-- Running THE PROJECT -->
+
 ## Running The Project
-
-Few simple steps to run it:
-
-1. Download the Vehicle Tracker zip folder.
-2. Extract the Files from the downloaded file.
-3. Open the folder [as IntelliJ IDEA project](https://www.jetbrains.com/help/idea/import-project-or-module-wizard.html).
-4. Add a path to a valid EML file as a command line argument (few  EML files for example and testing in the main folder).
+1. Clone repo:
+   `git clone https://github.com/talhazi/Vehicle-Tracker-System.git`
+2. Open the folder [as IntelliJ IDEA project](https://www.jetbrains.com/help/idea/import-project-or-module-wizard.html).
+3. Add a path to a valid EML file as a command line argument in the configuration.
+4. Examples for command line arguments configuration: <br/>
+    ```
+    tests/report1.eml
+    ```
+    ```
+    tests/report1.eml tests/report2.eml tests/report3.eml tests/report4.eml tests/report5.eml tests/report6.eml tests/report7.eml
+    ```
 5. RUN.
 
 ### Built With
-
 * [EML parser](https://www.programmersought.com/article/93981125979/)
 * [ZXing (QR code)](https://github.com/zxing/zxing)
 * [metadata directory](https://www.tabnine.com/code/java/methods/com.drew.metadata.Directory/getTags)
 * [Tesseract OCR](https://www.geeksforgeeks.org/tesseract-ocr-with-java-with-examples/)
-
 
 
 <!-- CONTACT -->
